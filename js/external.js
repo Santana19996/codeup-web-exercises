@@ -4,11 +4,36 @@
 
 console.log('Hello from JavaScript!');
 
-alert("Get out of my website");
+alert("Welcome to my website!");
 
-// the following line will show the OK/CANCEL confirm dialog
-var confirmed = confirm('Are you sure you want to disobey?');
-console.log(confirmed); // will be either true or false
 
-var userInput = prompt('Please type something:');
-console.log('The user entered: ' + userInput);
+var color;
+
+color = prompt("What is your favorite color");
+var message;
+message = "Great, " + color + " is my favorite color too!"
+alert(message);
+
+var mermaid = 3
+var BrotherBear = 5
+var Hercules = 1
+
+mermaid + BrotherBear + Hercules * 3;
+
+alert("The price of the movies is $27")
+
+var Google = 400
+var Amazon = 380
+var Facebook = 350
+
+Facebook * 10 + Google * 6 + Amazon * 4
+alert("$7420")
+
+var full = confirm ("Is the class full");
+var conflict = confirm("Is there a conflict");
+alert("You can enroll in the class:" + (!full && !conflict));
+
+
+
+
+
