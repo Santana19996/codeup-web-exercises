@@ -3,7 +3,7 @@
 /* ########################################################################## */
 
 /**
- * TODO:
+
  * Create a function named `analyzeColor` that accepts a string that is a color
  * name as input. This function should return a message that related to that
  * color. Only worry about the colors defined below, if the color passed is not
@@ -19,6 +19,23 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+function analyzeColor(colorName) {
+    if (colorName === "blue") {
+        alert("blue is the color of the sky");
+    }   else if (colorName === "red"){
+        alert("Strawberries are red");
+} else if (colorName === "cyan") {
+    alert("I dont know anything about cyan");}
+     else {
+        return ("I dont know anything about your color");
+    }}
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("red"));
+console.log(analyzeColor("cyan"));
+
+
+
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -93,3 +110,23 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var answer = confirm("Would you like to enter a number?")
+if (answer) {
+    var number = prompt("Enter a number");
+    if (isNan(number)) {
+        alert("You didnt enter a number")
+    }else {
+        number = parseFloat(number);
+        if (number % 2 == 0) {
+            alert("Your number is even")
+        }else{
+            alert("Your number is odd")
+        }
+        alert("100 + your number is :" + (number+100));
+        if number  < 0 ) {
+    alert("Your number is negative")
+        }else{
+    alert("Your number is positive")
+        }
+    }
+}
