@@ -84,7 +84,7 @@ function calculateTip(bill) {
 
 console.log(calculateTip(30));
 /**
- * TODO:
+
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
@@ -94,7 +94,7 @@ alert(bill)
 alert(calculateTip)
 
 /**
- * TODO:
+
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
  * and 1). It should return the result of applying the discount to the original
