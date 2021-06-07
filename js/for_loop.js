@@ -19,12 +19,36 @@
   //  "=" + "oscar" *
   //  "seatnumber" + "")
 
-for (let i = 0; i < 10; i++) {
-    const rnd = Math.floor(Math.random() * 180+20);
-    if (rnd % 2 === 0) {
-        console.log(rnd +  " is even");
+//for (let i = 0; i < 10; i++) {
+  //  const rnd = Math.floor(Math.random() * 180+20);
+   // if (rnd % 2 === 0) {
+ //       console.log(rnd +  " is even");
+  //  }
+  //  else {
+    //    console.log(rnd + " is odd");
+ //   }
+//}
+
+
+function Sasuke() {
+    var Naruto = 9;
+    var Pain = 1;
+    Pain < 10;Pain++
+    var Itachi = ""
+    Itachi += "1";
+    let pain;
+    for (var x = 1; x <= Naruto; x++) {
+        for (var y = 1; y <= x; y++) {
+            pain += y + '';
+        }
+        console.log(pain * Itachi)
+        pain = '';
+
     }
-    else {
-        console.log(rnd + " is odd");
-    }
-}
+        }
+    Sasuke();
+
+//for (var index = 100; index > 0; index = index -5){
+   // console.log(index)
+//}
+
