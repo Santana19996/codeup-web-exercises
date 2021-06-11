@@ -8,8 +8,10 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
+         let pie = Math.PI
+         let piArea = pie*Math.pow(this.radius,2)
 
-            return; // TODO: return the proper value
+            return piArea; // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
@@ -36,4 +38,6 @@
     circle.logInfo(false);
     console.log("Circle information rounded to the nearest whole number");
     circle.logInfo(true);
+    var getArea = circke;
+    console.log( circle.getArea())
 })();

@@ -47,90 +47,89 @@ var shoppers = [
     {name: 'Ryan', amount: 250},
     {name: 'George', amount: 320}]
 
-let percentageoff = .12
-shoppers.forEach(function(shoppers){
+shoppers.forEach(function(shopper) {
+    if (shopper.amount <= 200) {
+        let discount = 0
+        let amount = shopper.amount
+        console.log(shopper.name + "owes" + amount.toFixed())
+    } else {
+        let discount = shopper.amount * .12
+        let amount = shopper.amount - discount
+        console.log(shopper.name + "spent" + shopper.amount + "gets a discount" + discount.toFixed(2))
+    }
 
-    let discount = shoppers.amount * percentageoff
-    let total = shoppers.amount - discount
-if(shoppers.amount < 200) {
-   console.log(shoppers.name + shoppers.amount +" Total Spent")
-}
-})
 
-
-
-
-   //  * Create an array of objects that represent books and store it in a
+    //  * Create an array of objects that represent books and store it in a
     // * variable named `books`. Each object should have a title and an author
-   //  * property. The author property should be an object with properties
-   //  * `firstName` and `lastName`. Be creative and add at least 5 books to the
-   //  * array
-   //  *
+    //  * property. The author property should be an object with properties
+    //  * `firstName` and `lastName`. Be creative and add at least 5 books to the
+    //  * array
+    //  *
 
 //console.log(this.firstName+ books[0])
     // * Example:
-   //  * > console.log(books[0].title) // "The Salmon of Doubt"
-   //  * > console.log(books[0].author.firstName) // "Douglas"
-   //  * > console.log(books[0].author.lastName) // "Adams"
+    //  * > console.log(books[0].title) // "The Salmon of Doubt"
+    //  * > console.log(books[0].author.firstName) // "Douglas"
+    //  * > console.log(books[0].author.lastName) // "Adams"
     // */
-  let books = [
-      {
-          title: " Harry Potter",
-          author : {
-              firstName : " J.K.",
-              lastName : " Rowling"
-          }
-      },
-      {
-          title: " GooseBumps",
-          author : {
-              firstName : " R.L.",
-              lastName : " STEIN"
-          }
-      },
-      {
-          title: " The Shining",
-          author : {
-              firstName : " Steven",
-              lastName : " King"
-          }
-      },
-      {
-          title: " The Alchemist",
-          author : {
-              firstName : " Paulo ",
-              lastName : "Coehlo"
-          }
-      },
-      {
-          title: " A smarter way to learn Javascript",
-          author : {
-              firstName : " Mark",
-              lastName : " Myers"
-          }
-      }
+    let books = [
+        {
+            title: " Harry Potter",
+            author: {
+                firstName: " J.K.",
+                lastName: " Rowling"
+            }
+        },
+        {
+            title: " GooseBumps",
+            author: {
+                firstName: " R.L.",
+                lastName: " STEIN"
+            }
+        },
+        {
+            title: " The Shining",
+            author: {
+                firstName: " Steven",
+                lastName: " King"
+            }
+        },
+        {
+            title: " The Alchemist",
+            author: {
+                firstName: " Paulo ",
+                lastName: "Coehlo"
+            }
+        },
+        {
+            title: " A smarter way to learn Javascript",
+            author: {
+                firstName: " Mark",
+                lastName: " Myers"
+            }
+        }
 
 
-  ];
-  console.log(books[0].title);
-  console.log(books[0].author.firstName);
-  console.log(books[0].author.lastName)
+    ];
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName)
 
-  console.log(books[1].title);
-  console.log(books[1].author.firstName);
-  console.log(books[1].author.lastName)
+    console.log(books[1].title);
+    console.log(books[1].author.firstName);
+    console.log(books[1].author.lastName)
 
-  console.log(books[2].title);
-  console.log(books[2].author.firstName);
-  console.log(books[2].author.lastName)
+    console.log(books[2].title);
+    console.log(books[2].author.firstName);
+    console.log(books[2].author.lastName)
 
-  console.log(books[3].title);
-  console.log(books[3].author.firstName);
-  console.log(books[3].author.lastName)
+    console.log(books[3].title);
+    console.log(books[3].author.firstName);
+    console.log(books[3].author.lastName)
 
-  console.log(books[4].title);
-  console.log(books[4].author.firstName);
-  console.log(books[4].author.lastName)
+    console.log(books[4].title);
+    console.log(books[4].author.firstName);
+    console.log(books[4].author.lastName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -155,10 +154,10 @@ if(shoppers.amount < 200) {
      *      -
      *      ...
      */
-for(let index = 0; index <=4; index++){
-    console.log(" Book # "  + ( index+1)+"\n" +" Title:"+ books[index].title +"\n"+ " Author:"
-        + books[index].author.firstName + books[index].author.lastName  )
-}
+    for (let index = 0; index <= 4; index++) {
+        console.log(" Book # " + (index + 1) + "\n" + " Title:" + books[index].title + "\n" + " Author:"
+            + books[index].author.firstName + books[index].author.lastName)
+    }}
 
     /**
      * Bonus:
@@ -172,3 +171,4 @@ for(let index = 0; index <=4; index++){
      */
 
 
+)
