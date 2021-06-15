@@ -1,0 +1,26 @@
+
+h1 {text-align: center;}
+
+h1 ,h2{
+    color:maroon;
+    text-decoration:underline;
+}
+
+body{
+    background-color: silver;
+    background-image: url("https://cdn.hipwallpaper.com/i/29/54/KNuSpH.png");
+    background-postion: top;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+ul > li {
+    list-style-type: rectangle;
+}
+
+* {
+   font-family: 'cursive',cursive;
+}
+a:hover {
+    background-color: darkred;
+}
