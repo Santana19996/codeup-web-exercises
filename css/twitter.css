@@ -29,7 +29,6 @@ a {
     background: var(--light-bg);
     width: 100%;
     position: fixed;
-    z-index: 1000;
 }
 li {
     display:inline;
@@ -49,10 +48,7 @@ li {
 }
 .container{
 margin: 2em;
-
-
 }
-
 .timeline{
     float:left;
     width: calc(50%- 1em);
@@ -71,10 +67,6 @@ margin: 2em;
 .nav {
     list-style-type: none;
 
-}
-.nav-item{
-    padding: 1.5em;
-    display: inline-block;
 }
 .nav-link {
     color: var(--main-link-color);
@@ -117,6 +109,17 @@ margin: 2em;
 .media-image{
     float:left;
     margin-top: 1.33em;
-    width: 50px;
+    max-width: 50px;
 }
-
+.media-body{
+    float:right;
+    width: 100%;
+}
+.media {
+    --light-bg: white;
+    background-color: white;
+    padding: .5em;
+    border-bottom: .1em solid #bbb;
+    width: 100%;
+    overflow:auto;
+}
