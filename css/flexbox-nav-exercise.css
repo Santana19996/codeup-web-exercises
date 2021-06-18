@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    background-color: grey;
+    justify-content: space-between;
+}
+
+.nav-items{
+    display: flex;
+}
+.nav-link > a{
+    color:#aaaa;
+    text-decoration:none;
+    padding: 0 5px;
+}
+
+.nav-link{
+    align-self: center;
+}
+.nav-link > a:hover{
+    padding: 0 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
