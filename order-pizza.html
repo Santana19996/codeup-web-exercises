@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -9,8 +10,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/bootstap%20css.css">
   <title></title>
-</head>
+
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Pizza world</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,77 +34,215 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Stores near you!</button>
         </form>
       </li>
-<li>
+      <li>
     </ul>
-
-
-  <button type="button" class="btn btn-light">Sign up</button>
+    <button type="button" class="btn btn-light">Sign up</button>
   </div>
 </nav>
 
 
-<div
+  <div class="container">
 
-<div
-        class="p-5  bg-image rounded-1"
-        style="  background-image: url('images/pizza.png'); "
->
-  <div class="mask" style="background-color: rgba(213,208,208,0.79);">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-black-50">
-        <h1 class="mb-3">Welcome to Pizza World!</h1>
+  <div class="jumbotron">
+  <div class="container">
+  <h1 class="text-center">Welcome to Pizza World! </h1>
+    </div>
+  </div>
+  </div>
+<div class="container">
+  <h2>Build your own piza!</h2>
+</div>
+<div>
+  <div class="container">
 
-
-      </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-pill badge-light">1</span>Size and crust</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-pill badge-light">2</span>Cheese and Sauce</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-pill badge-light">3</span>Toppings</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
     </div>
   </div>
 </div>
-
-
 <div class="container">
-<h2> Build your own pizza!</h2>
-
-
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">1 Size and crust</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">2 Cheese and Sauce</a>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">3 Toppings</a>
-    </li>
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-  </div>
-</div>
-
 <div class="card">
-  <div class="card-header" style="width:71rem ">
-    Choose size and crust
-  </div>
-  <br>
-<div class="card" style="width: 69rem;">
+  <div class= "card-header p-3 mb-2 bg-primary text-white">Choose size and crust</div>
+  &nbsp;
+  <div class="container">
+  <div class="card" style="width: 66rem;">
+    <div class="card-header">
+     Hand Tossed
+    </div>
+    <form>
+    <ul class="list-group list-group-flush">
 
-    <div class="card-header">Hand Tossed</div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-      <li class="list-group-item">Small(10")</li>
-      <li class="list-group-item">Medium(12")</li>
+      <li class="list-group-item">Garlic seasoned crust with a rich,buttery taste.</li>
+      <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">Small(10")</label></li>
+      <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">Medium(12")</label></li>
     </ul>
-  <br>
-  <div class="card" style="width: 69rem;">
-    <div class="card-header">Crispy thin</div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-      <li class="list-group-item">Medium(12")</li>
-      <li class="list-group-item">Large(14")</li>
-    </ul>
+    </form>
+  </div>
+    &nbsp;
+
+
+    <div class="card" style="width: 66rem;">
+
+  <div class="card-header">
+    Crispy Thin
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">  Thin enough for optimum crispy to crunch ratio.</li>
+    <li class="list-group-item">  <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Medium(12")</label></li>
+    <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Large(14")</label></li>
+  </ul>
   </div>
 </div>
+  <div class="card-body">
+    <div class="card-footer text-muted"><a href="#" class="btn btn-primary">Next Step ></a>
+       <br>
+      <br>
+    </div>
 
+  </div>
+</div>
+</div>
+<br>
+<div class="container">
+  <div class="card">
+    <div class= "card-header p-3 mb-2 bg-primary text-white">Choose cheese and Sauce</div>
+    &nbsp;
+    <div class="container">
+      <div class="card" style="width: 66rem;">
+        <div class="card-header">
+          Cheese
+        </div>
+        <form class="form-inline">
+          &nbsp;  <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> &nbsp; &nbsp; How Much?</label>
+          &nbsp;  &nbsp; &nbsp;  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          &nbsp;  &nbsp;  <option selected>&nbsp; Regular...</option>
+            <option value="1">Light</option>
+            <option value="2">Normal</option>
+            <option value="3">Extra</option>
+            <option value="3">Double</option>
+          </select>
+
+
+        </form>
+      &nbsp;
+
+
+      <div class="card" style="width: 66rem;">
+
+        <div class="card-header">
+          Sauce
+        </div>
+        <form class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> &nbsp; &nbsp; What type?</label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <option selected>Robust Inspired Tomatoe Sauce</option>
+            <option value="1">Tomato</option>
+            <option value="2">Marinara sauce</option>
+            <option value="3">BBQ Sauce</option>
+            <option value="3">Alfredo Sauce</option>
+          </select>
+
+
+        </form>
+        <form class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"> &nbsp; &nbsp; How Much?</label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <option selected>Regular...</option>
+            <option value="1">Light</option>
+            <option value="2">Normal</option>
+            <option value="3">Extra</option>
+
+          </select>
+
+<br>
+        </form>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="btn-group"
+      <div class="card-footer "> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#" class="btn btn-primary">< Previous Step </a><a href="#" class="btn btn-primary"> Next Step > </a>
+        <br>
+        <br>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <div class= "card-header p-3 mb-2 bg-primary text-white">Choose size and crust</div>
+    &nbsp;
+    <div class="container">
+      <div class="card" style="width: 66rem;">
+        <div class="card-header">
+          Choose Meats
+        </div>
+        <div class="p-2">
+          <form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+
+              <input type="checkbox" name="send_newsletter" id="send_newsletter" />
+              <label for="send_newsletter">Send me newsletter</label>
+            </div> <div>
+              <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+              <label for="agree">Agree</label>
+            </div>
+            <div>
+              <input type="checkbox" name="send_newsletter" id="send_newsletter" />
+              <label for="send_newsletter">Send me newsletter</label>
+            </div>
+            <div>
+              <input type="checkbox" name="send_newsletter" id="send_newsletter" />
+              <label for="send_newsletter">Send me newsletter</label>
+            </div>
+            <div>
+
+            </div>
+          </form>
+      </div>
+
+<br>
+
+      <div class="card" style="width: 66rem;">
+
+
+
+
+              <div class="card" style="width: 66rem;">
+                <div class="card-header">
+                  Choose Non-Meats
+                </div>
+                <form>
+                  <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">Garlic seasoned crust with a rich,buttery taste.</li>
+                    <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">Small(10")</label></li>
+                    <li class="list-group-item"><input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">Medium(12")</label></li>
+                  </ul>
+                </form>
+              </div>
+              &nbsp;
+
+
+              <div class="card" style="width: 66rem;">
 </body>
 </html>

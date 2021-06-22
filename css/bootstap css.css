@@ -1,9 +1,27 @@
 .jumbotron{
     margin-top: 10px;
 
-    background-image: url('images/pizza.png'); "
+    background-image: url('../images/pizza.png'); "
     background-size: cover;
-    color:black;
+    color: #575454;
+
+}
+
+
+
+h1 {
+    background: rgba(245, 243, 243, 0.64);
+    color: #454343;
+
+    left: 10.2em;
+    position: absolute;
+    right: 10.2em;
+    text-align: center;
+}
+
+.btn-primary{
+    float: right;
+display: flex;
 
 }
 
