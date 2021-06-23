@@ -1,0 +1,7 @@
+.”box”{
+   display: flex;
+    border: 10px solid ;
+    border-color: #bbb7b7;
+    padding: 2em;
+background-color: #bbb7b7;
+}

@@ -1,19 +1,29 @@
-#projectName{
+/*#projectName{*/
+/*    color: #0073ff;*/
+/*}*/
+
+/*#projectName2{*/
+/*    color: #0073ff;*/
+/*}*/
+
+/*#projectName3{*/
+/*    color: #0073ff;*/
+/*}*/
+
+/*#projectName4{*/
+/*    color: #0073ff;*/
+/*}*/
+
+/*#projectName5{*/
+/*}*/
+
+h2 {
     color: #0073ff;
 }
-
-#projectName2{
-    color: #0073ff;
-}
-
-#projectName3{
-    color: #0073ff;
-}
-
-#projectName4{
-    color: #0073ff;
-}
-
-#projectName5{
-    color: #0073ff;
+#box{
+    display: flex;
+    height: 1px;
+    border-color: #188418;
+    padding: -10em;
+    background-color: #188418;
 }
