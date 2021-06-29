@@ -67,7 +67,7 @@ console.log(isTwo(2));
 console.log(isTwo(3));
 
 /**
- * TODO:
+
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
  * bill, and return the amount to tip

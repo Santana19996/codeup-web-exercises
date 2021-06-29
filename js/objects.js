@@ -1,6 +1,6 @@
 var log = console.log()
   //  /**
-  //   * TODO:
+
   //   * Create an object with firstName and lastName properties that are strings
   //   * with your first and last name. Store this object in a variable named
   //   * `person`.
@@ -28,7 +28,7 @@ person.sayHello = function () {
 console.log(person.sayHello())
 
 
-  //  /** TODO:
+
   //   * HEB has an offer for the shoppers that buy products amounting to
   //   * more than $200. If a shopper spends more than $200, they get a 12%
   //   * discount. Write a JS program, using conditionals, that logs to the
@@ -131,7 +131,7 @@ shoppers.forEach(function(shopper) {
     console.log(books[4].author.firstName);
     console.log(books[4].author.lastName)
     /**
-     * TODO:
+
      * Loop through the books array and output the following information about
      * each book:
      * - the book number (use the index of the book in the array)

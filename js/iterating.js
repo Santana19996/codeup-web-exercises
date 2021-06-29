@@ -31,7 +31,7 @@ var names = ['Vivian', 'Sergio', 'Eric', 'Selena']
         console.log(names[number]);
     }
     /**
-     * TODO:
+
      * Refactor your above code to use a `forEach` loop
      */
 names.forEach(element => console.log(element));
@@ -39,7 +39,7 @@ names.forEach(element => console.log(element));
   //  names.forEach(function(element) {
     //    console.log(element);
     /**
-     * TODO:
+
      * Create the following three functions, each will accept an array and
      * return an an element from it
      * - first: returns the first item in the array

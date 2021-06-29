@@ -1,7 +1,18 @@
-.”box”{
+h1{
    display: flex;
-    border: 10px solid ;
-    border-color: #bbb7b7;
-    padding: 2em;
-background-color: #bbb7b7;
+    border: 1px solid ;
+    border-color: #cbc8c8;
+height: 40px;
+background-color: #cbc8c8
+
 }
+
+img{
+    margin-inline: auto;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
