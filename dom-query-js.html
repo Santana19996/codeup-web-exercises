@@ -5,6 +5,11 @@
   <title>DOM: Query and Modify</title>
 </head>
 <body>
+<button id="button1" type="button">Click Me!</button>
+<button id="button2" type="button">Click Me!</button>
+<button id="button3" type="button">Click Me!</button>
+<button id="button4" type="button">Click Me!</button>
+
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -32,31 +37,69 @@
 var getmain = document.querySelector("#main-header");
 
     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-    getmain.innerHTML = "JavaScript is Cool";
+   // getmain.innerHTML = "JavaScript is Cool";
 
 
     // TODO: Uncomment the next line and get the sub header element by id
 var getsub = document.querySelector("#sub-header")
 
     // TODO: Set the text color of subHeader to blue
-getsub.style.color = "blue"
+//getsub.style.color = "blue"
 
     // TODO: Uncomment the next line and get all list items
  var getli =  document.querySelectorAll("li")
 
     // TODO: Set text color on every other list item to grey
       // getli.style.color = "gray" Not Working
-for(var i = 0; i < getli.length; i += 2){
-  getli[i].style.color = "grey"
-}
+//for(var i = 0; i < getli.length; i += 2){
+  //getli[i].style.color = "grey"
+//}
     // TODO: Set text color of li with dbid = 1 to blue
-
+    // for(let item of getli) {
+    //   if (item.getAttribute("data-dbid") === "1") {
+    //     item.style.color = "blue";
+    //   }
+    // }
     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-    // var subParagraphs = ;
+    var subParagraphs = document.querySelector(".sub-paragraph");
 
     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    subParagraphs.innerHTML = "<h1>Mission Accomplished!</h1>";
 
+
+
+    document.getElementById("button1").addEventListener("click", function() {
+      document.getElementById("main-header").innerHTML = "JavaScript is Cool!";
+    });
+
+    document.getElementById("button2").addEventListener("click", function() {
+      document.getElementById("sub-header").style.color = "grey"
+
+    })
+
+    document.getElementById("button3").addEventListener("click", function() {
+      document.querySelectorAll("li")
+        for(var i = 0; i < getli.length; i += 2){
+          getli[i].style.color = "grey"
+      }
+
+      document.getElementById("button4").addEventListener("click", function() {
+document.querySelectorAll("li")
+        for(let item of getli) {
+          if(item.getAttribute("data-dbid") == "1"){
+            item.style.color = "blue"
+          }
+        }
+
+      })
+
+    })
   })();
+
+
+
+
+
 </script>
 </body>
 </html>
