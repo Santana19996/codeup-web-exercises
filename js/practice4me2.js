@@ -24,3 +24,7 @@
 function firstAndSecond(sequence){
     return sequence[0] && sequence[1]
 }
+
+
+
+
