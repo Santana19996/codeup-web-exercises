@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"/>
+
 </head>
 <body>
 
 <h1 class="codeup">I HAVE MY DOUBTS</h1>
 
-<p class="codeup">What am I going to eat for diner today? I think nothing sounds nice. </p>
+<h3> <em>MOVE THIS THING AROUND</em> </h3>
+
+<p class="codeup">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    In sit amet erat vel enim aliquet placerat sodales vel dolor.
+    Maecenas ultricies vehicula velit. Praesent ut varius nisi, sed convallis dolor.
+    Praesent ac pulvinar turpis.
+    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    Integer dolor arcu, dapibus congue neque vel, mollis porta turpis.
+    Aenean eget magna tempus, lobortis arcu a, efficitur lorem.
+    Fusce in vehicula dolor, ut suscipit justo.
+    Morbi tellus sapien, condimentum non venenatis ac, finibus in quam. </p>
 
 <ul class="codeup">
     <li>Chicken Breast</li>
@@ -25,12 +38,57 @@
 <!--- ID SELECTORS-->
 <script>$(document).ready(function () {
 
-$("h1").css('background-color', 'yellow')
-    $("p").css('background-color', 'yellow')
-    $("li").css('background-color', 'yellow')
-    // $(".codeup").highlight(["h1"])
+$("h1").click(function() {
+    $("h1").css("background-color", "maroon")
+})
+    $("p").click(function(){
+    $("p").css("font-size", "20px")
+
+})
+
+    $("li").hover(function(hover_in) {
+        $("li").css("background-color", 'maroon')
+    },  function (hover_out){
+    $("li").css("background-color", "white")
+    })
+
+    $(document).ready(function() {
+        $("h3").addClass("animated bounce");
+    });
 
 
+
+    /* .target ? and .this */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $("h1").css('background-color', 'yellow')
+//     $("p").css('background-color', 'yellow')
+//     $("li").css('background-color', 'yellow')
+//     // $(".codeup").highlight(["h1"])
+//
+//
 
 
     // $("ul").css({
@@ -66,7 +124,6 @@ $("h1").css('background-color', 'yellow')
 
 
 </script>
-
 
 
 

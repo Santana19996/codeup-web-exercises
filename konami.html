@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Konami Code</title>
+
+</head>
+<body>
+
+
+<h1> Konami Code</h1>
+
+<h2> Enter the secret code</h2>
+
+
+<video id="myVid" width="400" height="200">
+    <source src="Documents/audio/Sexy Sax Man Careless Whisper Prank feat. Sergio Flores (directors cut).mp4" type="video/mp4">
+
+</video>
+<script>
+
+    var image = document.getElementById("img1");
+    // let pressed = []
+    // let secretcode = ["ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"]
+    // "use strict";
+    // let keys = ""
+    $(document).ready(function (){
+
+
+
+
+        function addElement() {
+            document.getElementById("img1").style.display
+        }
+
+
+var allkeyspressed = ''
+function keyspressed (event){
+allkeyspressed +=event.key;
+var didkeys = (allkeyspressed.includes ("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRight"));
+    console.log(allkeyspressed)
+if(didkeys){
+    allkeyspressed= ""
+   alert('You got it correct')
+
+
+    function activateCheats() {
+        document.body.style.backgroundImage = "url(images/saxman.jpeg)";
+
+        var audio = new Audio('Documents/audio/Sexy Sax Man Careless Whisper Prank feat. Sergio Flores (directors cut).mp3');
+        audio.play();
+
+    }
+    activateCheats()
+    }
+
+}
+
+    $(document).keydown(keyspressed)
+// }
+//    window.addEventListener('keyup', (e) => {
+//        console.log(e.key)
+//        pressed.push(e.key)
+//        if(pressed.length> secretcode.length)pressed.splice(0,1)
+//        if(pressed.join('').includes(secretcode)){
+//            console.log('Congratulations')
+//        }
+//        console.log(pressed)
+   })
+
+
+
+
+
+</script>
+</body>
+</html>
