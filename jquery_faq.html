@@ -20,6 +20,11 @@
 
 </head>
 <body>
+<h1>National Park Facts</h1>
+<button class="btnfun">Click me</button>
+<label>
+  <input type="text" value="" >
+</label>
 <dl>
   <dt> Park1</dt>
   <dd>The National Park Service protects over 84 million acres of wild landscapes and historic sites.</dd>
@@ -101,6 +106,8 @@
 <script src="js/basic_jquery_src.js"></script>
   <script>
 
+    //First part of excercise
+
     $(document).ready(function() {
 
       $('dd').addClass('invisible');
@@ -109,29 +116,12 @@
         $('dd').toggleClass('invisible')
       });
 
-//      var unOrderedlist= $(#each).css{'color': "blue"}
-// listitems.each(function(index){
-//   console.log($(this).html
-// }
-// if(index % 2 ===1){
-//       $(this).css
-//       {
-//         "color"
-//       :
-//         "red"
-//       }
 //
-//     }else{
-//       $(this).css({"color": "red"})
 
-      //
-      // var listItems = $("#first > li");
-      // listItems.css({"color":"pink"})
-      //
-      // listItems.first().css({"background-color": "yellow"})
-      //
-      //
-      // $('li').last().css('background-color', '#FF0');
+
+
+      //2nd part of excercise
+
 
 
       $('li').addClass('lastcolor'); // Added Li to class
@@ -139,17 +129,8 @@
 
 
 
-//       var allofthem =    $( ".lastcolor" ).each(function( index , li ) {
-//       }); // Trying to use the each to grab all the LI'S AND store them in a variable
-//
-//       $('.btn2').click(function () {
-//         $(allofthem).last().toggleClass()
-// //trying to call the variable and apply
-//
-//       });
-//
 
-
+//This is to turn the last LI Yellow, it works but doesnt revert
       $(".lastcolor").click(coloryellow);
 
       function coloryellow(){
@@ -159,21 +140,83 @@
           })
         })
       }
+
+
+
+
+      //This turns my content to bold
 boldit()
 function boldit () {
   $('h3').click(function () {
 $(this).next().children().css('font-weight', "bold")
 
+
+
+
+
+
+
+
+
   })
 }
 
 
-  $('ul').click(function () {
-    $(this).parent().children().first().css()('color', 'blue')
-  })
+//This is for practice/fun
+// $("button").click(function() {
+      // $("h1").css("color", "purple")
+
+
+      //
+      $(document).keypress(function(event){
+        $("h1").text(event.key)
+      })
+
+      $("h1").on("mouseover", function (){    //this is another way to add event
+        $("h1").css("color", "purple")
+      })
+
+      //Fadeout insteead of hide
+
+$(".btnfun").on("click", function (){
+  $("h1").slideUp().slideDown().slideUp().slideDown().slideUp().slideDown().slideUp().slideDown().slideUp().slideDown()
+          .animate({opacity: 0.5})
+})
+
+
+
+
+
+
+      //Trying to turn the first li blue...INOP
+      colorblue()
+      function colorblue(){
+        $('ul').click(function () {
+          $('ul').each(function () {
+            $(this).children().first().css('background-color', 'blue').toggleClass()
+          })
+        })
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     });
+
+
 </script>
 
 </body>
