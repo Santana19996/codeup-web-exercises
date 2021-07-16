@@ -2,21 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapbox Lecture</title>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
+    <title>MapBox</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
-<div id='map' style='width: 90vw; height: 90vh;'></div>
-<script src="./js/keys.js" ></script>
+
+
+<div id='map' style='width: 98vw; height: 98vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
 <script>
-    mapboxgl.accessToken = mapBoxAPIKey;
+    mapboxgl.accessToken = mapBoxAPIKey ;
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
     });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.48922,29.56466])
+        .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+        // .setLngLat([-98.45251678925071,29.567244316609294])
+        .setHTML("<img width='50px' height='auto' src='https://img-premium.flaticon.com/png/512/2821/2821803.png?token=exp=1626375496~hmac=b03319c91e79fa150a9cb4392d01c053' >")
+        // .setMaxWidth("100px")
+        .addTo(map)
+
+
+    marker.setPopup(popup)
+
+    var locationToSearchFor = "13444 West Ave STE200, San Antonio, TX 78216"
+
+    geocode(locationToSearchFor,mapBoxAPIKey).then(function(HeroRamenCoordinates){
+        console.log(`Here is where Hero Ramen is ${locationToSearchFor}`)
+        console.log(HeroRamenCoordinates)
+
+        var HeroRamenMarker = new mapboxgl.Marker()
+            .setLngLat(HeroRamenCoordinates)
+            .addTo(map);
+
+        var HeroRamenPopup = new mapboxgl.Popup()
+            // .setLngLat([-98.45251678925071,29.567244316609294])
+            .setHTML("<p>Hero Ramen</p>")
+            // .setMaxWidth("100px")
+            .addTo(map)
+
+        HeroRamenMarker.setPopup(HeroRamenPopup)
+
+    })
+
+
+
 </script>
+
 
 </body>
 </html>
