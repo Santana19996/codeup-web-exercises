@@ -36,7 +36,7 @@
       Weather App
     </span>
         <span class="text">
-      Current city:
+      Current city: &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
     </span>
     </div>
 </nav>
@@ -50,7 +50,7 @@
         <div id="searchbox">
             <form class="d-flex">
                 <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success"  id="button1">Search</button>
             </form>
         </div>
     </div>
@@ -164,142 +164,11 @@
   // <!--   This is where jquery comes in to play -->
 
 
-  var MyWeatherobject =
+
 
   $(document).ready(function () {
-$.get(`https://api.openweathermap.org/data/2.5/onecall?`,{
-  appid:OpenWeatherAPIKey,
-  lat: 29.4252,
-  lon: -98.4916,
-  units: "imperial"
-}).done(function (data){
-
-
-  <!-- This is displaying the Humidity for each day. -->
-
-  console.log(data.daily[0])
-  MyWeatherobject = data
-  var dayOneHumidity = data.daily[0].humidity
-  var dayTwoHumidity = data.daily[1].humidity
-  var dayThreeHumidity =data.daily[2].humidity
-  var dayFourHumdity = data.daily[3].humidity
-  var dayFiveHumidity = data.daily[4].humidity
-  $('#theHumidity1').html("Humidity: " + dayOneHumidity)
-  $('#theHumidity2').html("Humidity: " + dayTwoHumidity)
-  $('#theHumidity3').html("Humidity: " + dayThreeHumidity)
-  $('#theHumidity4').html("Humidity: " + dayFourHumdity)
-  $('#theHumidity5').html("Humidity: " + dayFiveHumidity)
-
-
-  var Datedata1 = new Date(data.daily[0].dt * 1000).toISOString().substr(0,10)
-  var Datedata2 = new Date(data.daily[1].dt * 1000).toISOString().substr(0,10)
-  var Datedata3 = new Date(data.daily[2].dt * 1000).toISOString().substr(0,10)
-  var Datedata4 = new Date(data.daily[3].dt * 1000).toISOString().substr(0,10)
-  var Datedata5 = new Date(data.daily[4].dt * 1000).toISOString().substr(0,10)
-  $('#Date1').html(Datedata1)
-  $('#Date2').html(Datedata2)
-  $('#Date3').html(Datedata3)
-  $('#Date4').html(Datedata4)
-  $('#Date5').html(Datedata5)
-
-
-  var PressureData1 = data.daily[0].pressure
-  var PressureData2 = data.daily[1].pressure
-  var PressureData3 = data.daily[2].pressure
-  var PressureData4 = data.daily[3].pressure
-  var PressureData5 = data.daily[4].pressure
-  $('#thePressure1').html("Pressure: " + PressureData1 )
-  $('#thePressure2').html("Pressure: " + PressureData2 )
-  $('#thePressure3').html("Pressure: " + PressureData3 )
-  $('#thePressure4').html("Pressure: " + PressureData4)
-  $('#thePressure5').html("Pressure: " + PressureData5)
-
-
-
-  var WindData1 = data.daily[0].wind_speed
-  var WindData2 = data.daily[1].wind_speed
-  var WindData3 = data.daily[2].wind_speed
-  var WindData4 = data.daily[3].wind_speed
-  var WindData5 = data.daily[4].wind_speed
-  $('#theWind1').html("Wind: " + WindData1 )
-  $('#theWind2').html("Wind: " + WindData2 )
-  $('#theWind3').html("Wind: " + WindData3 )
-  $('#theWind4').html("Wind: " + WindData4)
-  $('#theWind5').html("Wind: " + WindData5)
-
-
-  var DescriptionData1 = data.daily[0].weather[0].description
-  var DescriptionData2 = data.daily[1].weather[0].description
-  var DescriptionData3 = data.daily[2].weather[0].description
-  var DescriptionData4 = data.daily[3].weather[0].description
-  var DescriptionData5 = data.daily[4].weather[0].description
-
-
-
-
-  $('#theDescription1').html("Description: " + DescriptionData1 )
-  $('#theDescription2').html("Description: " + DescriptionData2)
-  $('#theDescription3').html("Description: " + DescriptionData3 )
-  $('#theDescription4').html("Description: " + DescriptionData4)
-  $('#theDescription5').html("Description: " + DescriptionData5)
-
-
-
-
-  var temperature1 = data.daily[0].temp.day
-  var temperature2 = data.daily[1].temp.day
-  var temperature3 = data.daily[2].temp.day
-  var temperature4 = data.daily[3].temp.day
-  var temperature5 = data.daily[4].temp.day
-
-  var max1 = data.daily[0].temp.max
-  var max2 = data.daily[1].temp.max
-  var max3 = data.daily[2].temp.max
-  var max4 = data.daily[3].temp.max
-  var max5 = data.daily[4].temp.max
-
-
-    var iconcode= data.daily[0].weather[0].icon;
-  var iconcode2= data.daily[1].weather[0].icon;
-  var iconcode3= data.daily[2].weather[0].icon;
-  var iconcode4= data.daily[3].weather[0].icon;
-  var iconcode5= data.daily[4].weather[0].icon;
-
-    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-  var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
-  var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
-  var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
-  var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
-
-
-  $("#Img1").attr("src",iconurl)
-  $("#Img2").attr("src",iconurl2)
-  $("#Img3").attr("src",iconurl3)
-  $("#Img4").attr("src",iconurl4)
-  $("#Img5").attr("src",iconurl5)
-
-  // var DescriptionData1img = data.daily[0].weather[0].icon
-  // var DescriptionData2img = data.daily[1].weather[0].icon
-  // var DescriptionData3img = data.daily[2].weather[0].icon
-  // var DescriptionData4img= data.daily[3].weather[0].icon
-  // var DescriptionData5img = data.daily[4].weather[0].icon
-
-  $('#WeatherTemp1').html( temperature1 + '/' + max1 +'&#8457' )
-  $('#WeatherTemp2').html(temperature2 + "/" + max2 +'&#8457;')
-  $('#WeatherTemp3').html( temperature3 +'/' + max3 +'&#8457;' )
-  $('#WeatherTemp4').html(temperature4 + "/"  + max4 +'&#8457;')
-  $('#WeatherTemp5').html(temperature5 + "/" + max5 +'&#8457;')
-
-console.log(data)
-
-
-})
-
-
-
-
-
-
+   var Longitude = -98.4916
+    var Latitude = 29.4252
 
     mapboxgl.accessToken = mapBoxAPIKey ;
 
@@ -308,14 +177,176 @@ console.log(data)
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
       zoom: 5,
-      center: [-98.4916, 29.4252]
+      center: [Longitude, Latitude]
+
 
 
 
     });
 
+    var marker = new mapboxgl.Marker({
+      draggable: true
+    })
+    marker.setLngLat([Longitude, Latitude])
+    marker.addTo(map)
+WeatherData(Longitude,Latitude)
+    function WeatherData(lon,lat) {
+      $.get(`https://api.openweathermap.org/data/2.5/onecall?`, {
+        appid: OpenWeatherAPIKey,
+        lat: lat,
+        lon: lon,
+        units: "imperial"
+      }).done(function (data) {
 
-  })
+        <!-- This is displaying the Humidity for each day. -->
+
+        console.log(data.daily[0])
+        MyWeatherobject = data
+        var dayOneHumidity = data.daily[0].humidity
+        var dayTwoHumidity = data.daily[1].humidity
+        var dayThreeHumidity = data.daily[2].humidity
+        var dayFourHumdity = data.daily[3].humidity
+        var dayFiveHumidity = data.daily[4].humidity
+        $('#theHumidity1').html("Humidity: " + dayOneHumidity)
+        $('#theHumidity2').html("Humidity: " + dayTwoHumidity)
+        $('#theHumidity3').html("Humidity: " + dayThreeHumidity)
+        $('#theHumidity4').html("Humidity: " + dayFourHumdity)
+        $('#theHumidity5').html("Humidity: " + dayFiveHumidity)
+
+
+        var Datedata1 = new Date(data.daily[0].dt * 1000).toISOString().substr(0, 10)
+        var Datedata2 = new Date(data.daily[1].dt * 1000).toISOString().substr(0, 10)
+        var Datedata3 = new Date(data.daily[2].dt * 1000).toISOString().substr(0, 10)
+        var Datedata4 = new Date(data.daily[3].dt * 1000).toISOString().substr(0, 10)
+        var Datedata5 = new Date(data.daily[4].dt * 1000).toISOString().substr(0, 10)
+        $('#Date1').html(Datedata1)
+        $('#Date2').html(Datedata2)
+        $('#Date3').html(Datedata3)
+        $('#Date4').html(Datedata4)
+        $('#Date5').html(Datedata5)
+
+
+        var PressureData1 = data.daily[0].pressure
+        var PressureData2 = data.daily[1].pressure
+        var PressureData3 = data.daily[2].pressure
+        var PressureData4 = data.daily[3].pressure
+        var PressureData5 = data.daily[4].pressure
+        $('#thePressure1').html("Pressure: " + PressureData1)
+        $('#thePressure2').html("Pressure: " + PressureData2)
+        $('#thePressure3').html("Pressure: " + PressureData3)
+        $('#thePressure4').html("Pressure: " + PressureData4)
+        $('#thePressure5').html("Pressure: " + PressureData5)
+
+
+        var WindData1 = data.daily[0].wind_speed
+        var WindData2 = data.daily[1].wind_speed
+        var WindData3 = data.daily[2].wind_speed
+        var WindData4 = data.daily[3].wind_speed
+        var WindData5 = data.daily[4].wind_speed
+        $('#theWind1').html("Wind: " + WindData1)
+        $('#theWind2').html("Wind: " + WindData2)
+        $('#theWind3').html("Wind: " + WindData3)
+        $('#theWind4').html("Wind: " + WindData4)
+        $('#theWind5').html("Wind: " + WindData5)
+
+
+        var DescriptionData1 = data.daily[0].weather[0].description
+        var DescriptionData2 = data.daily[1].weather[0].description
+        var DescriptionData3 = data.daily[2].weather[0].description
+        var DescriptionData4 = data.daily[3].weather[0].description
+        var DescriptionData5 = data.daily[4].weather[0].description
+
+
+        $('#theDescription1').html("Description: " + DescriptionData1)
+        $('#theDescription2').html("Description: " + DescriptionData2)
+        $('#theDescription3').html("Description: " + DescriptionData3)
+        $('#theDescription4').html("Description: " + DescriptionData4)
+        $('#theDescription5').html("Description: " + DescriptionData5)
+
+
+        var temperature1 = data.daily[0].temp.day
+        var temperature2 = data.daily[1].temp.day
+        var temperature3 = data.daily[2].temp.day
+        var temperature4 = data.daily[3].temp.day
+        var temperature5 = data.daily[4].temp.day
+
+        var max1 = data.daily[0].temp.max
+        var max2 = data.daily[1].temp.max
+        var max3 = data.daily[2].temp.max
+        var max4 = data.daily[3].temp.max
+        var max5 = data.daily[4].temp.max
+
+
+        var iconcode = data.daily[0].weather[0].icon;
+        var iconcode2 = data.daily[1].weather[0].icon;
+        var iconcode3 = data.daily[2].weather[0].icon;
+        var iconcode4 = data.daily[3].weather[0].icon;
+        var iconcode5 = data.daily[4].weather[0].icon;
+
+        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+        var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+        var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+        var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+
+
+        $("#Img1").attr("src", iconurl)
+        $("#Img2").attr("src", iconurl2)
+        $("#Img3").attr("src", iconurl3)
+        $("#Img4").attr("src", iconurl4)
+        $("#Img5").attr("src", iconurl5)
+
+        // var DescriptionData1img = data.daily[0].weather[0].icon
+        // var DescriptionData2img = data.daily[1].weather[0].icon
+        // var DescriptionData3img = data.daily[2].weather[0].icon
+        // var DescriptionData4img= data.daily[3].weather[0].icon
+        // var DescriptionData5img = data.daily[4].weather[0].icon
+
+        $('#WeatherTemp1').html(temperature1 + '/' + max1 + '&#8457')
+        $('#WeatherTemp2').html(temperature2 + "/" + max2 + '&#8457;')
+        $('#WeatherTemp3').html(temperature3 + '/' + max3 + '&#8457;')
+        $('#WeatherTemp4').html(temperature4 + "/" + max4 + '&#8457;')
+        $('#WeatherTemp5').html(temperature5 + "/" + max5 + '&#8457;')
+
+        console.log(data)
+
+
+      })
+    }
+
+// Now I have to ReverseGeo to find the cityname returned up top
+
+
+
+
+            function onDragEnd() {
+      var lngLat = marker.getLngLat();
+      map.setCenter([lngLat.lng, lngLat.lat])
+      map.setZoom(5)
+      WeatherData(lngLat.lng, lngLat.lat)
+      console.log(lngLat)
+    }
+
+    marker.on('dragend', onDragEnd);
+
+
+    $('#button1').click(function (event) {
+      event.preventDefault();
+      var searchBar = $('input').val();
+      console.log(searchBar);
+
+
+
+      geocode(searchBar, mapBoxAPIKey).then(function (areaCoordinates) {
+        console.log(areaCoordinates)
+        map.setCenter(areaCoordinates)
+        marker.setLngLat(areaCoordinates)
+        WeatherData(areaCoordinates[0], areaCoordinates[1]);}
+
+      ) }
+
+    )}
+  )
 
 </script>
 </body>
